@@ -6,7 +6,7 @@ class FirstCheckoutPage {
     postalCode = 'input[id=postal-code]';
     btnCancel = 'button[id=cancel]';
     btnContinue = 'input[id=continue]';
-    msgError = 'h3[data-test=error]';
+    msgError = 'h3[data-test=error-button]';
 
     inputFirstName (firstname) {
         cy.get(this.firstName).type(firstname);
