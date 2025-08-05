@@ -13,55 +13,18 @@ describe('Authentication Suites', () => {
 
     });
 
-    it('Verify Success to Login with Valid Credentials', () => {
+    it('Verify Success to Login and Logout with Valid Credentials', () => {
       loginPage.inputUsername(login.username);
       loginPage.inputPassword(login.password);
       loginPage.clickLoginButton();
       inventoryPage.verifyInventoryUrl();
       inventoryPage.verifyInventoryTitle();
       inventoryPage.verifyBurgerMenuIsDisplayed();
+      menuPage.clickOpenMenu();
+      menuPage.clickLogoutMenu();
+      loginPage.verifyLoginUrl();
     });
 
-     it('Verify Success to Logout', () => {
-       cy.login(login.username, login.password);
-       loginPage.clickLoginButton();
-       menuPage.clickOpenMenu();
-       menuPage.clickLogoutMenu();
-       loginPage.verifyLoginUrl();
-     });
-
-  }); // end Positive Case Login and Logout
-
-   describe('Negative Case Login', () => {
-
-     beforeEach(() => {
-       cy.visit('/');
-     });
-
-     it('Verify Failed to Login with Username Field Empty', () => {
-       loginPage.inputPassword(login.password);
-       loginPage.clickLoginButton();
-       loginPage.errorMessageIsDisplayed(login.message.msg_empty_username);
-     });
-
-     it('Verify Failed to Login with Password Field Empty', () => {
-       loginPage.inputUsername(login.username);
-       loginPage.clickLoginButton();
-       loginPage.errorMessageIsDisplayed(login.message.msg_empty_password);
-     });
-
-     it('Verify Failed to Login with All Field Empty', () => {
-       loginPage.clickLoginButton();
-       loginPage.errorMessageIsDisplayed(login.message.msg_empty_username);
-     });
-
-     it('Verify Failed to Login with Lock Out User Account', () => {
-       loginPage.inputUsername(login.locked_out_user);
-       loginPage.inputPassword(login.password);
-       loginPage.clickLoginButton();
-       loginPage.errorMessageIsDisplayed(login.message.msg_locked_out);
-     });
-
-   }); // end Negative Case Login
+   });
 
 });

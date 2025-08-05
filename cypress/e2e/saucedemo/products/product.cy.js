@@ -14,16 +14,10 @@ describe('Products Suite', () => {
 
   it('Verify System Display Add to Cart Button', () => {
     inventoryPage.verifyAddToCart();
-  });
-
-  it('Verify Success Add to Cart a Product', () => {
     inventoryPage.clickAddToCart();
     inventoryPage.verifyCartBadge('1');
-  });
-
-  it('Verify Display Remove Button after Add to Cart a Product', () => {
-    inventoryPage.clickAddToCart();
     inventoryPage.verifyRemoveButton();
+
   });
 
   afterEach(() => {

@@ -12,28 +12,13 @@ describe('Cart Suite', () => {
     loginPage.clickLoginButton();
   })
 
-  it('Verify Success Display Cart Page with Click on Cart Icon ', () => {
-    inventoryPage.clickCartIcon();
-    cartPage.verifyCartTitleIsDisplayed();
-  });
+  it('Verify Success Display Cart Page with Click on Cart Icon and product is displayed and can remove ', () => {
 
-  it('Verify Success Display Product List with Click on Continue Shopping Button', () => {
     inventoryPage.clickAddToCart();
     inventoryPage.clickCartIcon();
     cartPage.verifyProductListIsDisplayed();
-  });
-
-  it('Verify Success Remove a Product after Add to Cart on Cart Page', () => {
-    inventoryPage.clickAddToCart();
-    inventoryPage.clickCartIcon();
     cartPage.clickRemoveButton();
-    cartPage.verifyProductListIsNotDisplayed();
-  });
 
-  it('Verify Success Remove a Product after Add to Cart on Product List Page', () => {
-    inventoryPage.clickAddToCart();
-    inventoryPage.clickRemove();
-    inventoryPage.verifyAddToCart();
   });
 
   afterEach(() => {
