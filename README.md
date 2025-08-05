@@ -42,6 +42,4 @@ npm install mochawesome mocha --save-dev
 
 Running The Suites Test
 
-npx cypress open
-OR
 npx cypress run --env PROJECT_ENV=staging --spec cypress/e2e/saucedemo/**/*.cy.js --headed --browser chrome
