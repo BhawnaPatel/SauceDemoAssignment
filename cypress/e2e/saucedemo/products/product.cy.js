@@ -12,7 +12,7 @@ describe('Products Suite', () => {
     loginPage.clickLoginButton();
   })
 
-  it('Verify System Display Add to Cart Button', () => {
+  it('Verify System Display Add to Cart Button and product should be added and removed', () => {
     inventoryPage.verifyAddToCart();
     inventoryPage.clickAddToCart();
     inventoryPage.verifyCartBadge('1');
