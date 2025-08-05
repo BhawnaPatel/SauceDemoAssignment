@@ -10,16 +10,16 @@ The test cases included in this project are:
     Test Add items to cart: Tests the ability to add items to cart.
     Test Remove items from cart: Tests the process of remove items from cart.
 
-### Screenshot of Saucedemo Report
+## Screenshot of Saucedemo Report
 
-## Mochawesome Report
+### Mochawesome Report
 ![img.png](img.png)
 
-## Terminal Console Screenshot
+### Terminal Console Screenshot
 
 ![img_1.png](img_1.png)
 
-## Mochawesome Report
+### Mochawesome Report
 Terminal Report
 Getting Started
 Prerequisites
