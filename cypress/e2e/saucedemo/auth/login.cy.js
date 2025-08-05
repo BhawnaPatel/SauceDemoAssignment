@@ -10,18 +10,15 @@ describe('Authentication Suites', () => {
     beforeEach(() => {
       cy.visit('/');
       cy.url().should('include', 'saucedemo');
+      cy.login();
 
     });
 
     it('Verify Success to Login and Logout with Valid Credentials', () => {
-      loginPage.inputUsername(login.username);
-      loginPage.inputPassword(login.password);
-      loginPage.clickLoginButton();
       inventoryPage.verifyInventoryUrl();
       inventoryPage.verifyInventoryTitle();
       inventoryPage.verifyBurgerMenuIsDisplayed();
-      menuPage.clickOpenMenu();
-      menuPage.clickLogoutMenu();
+      cy.logout();
       loginPage.verifyLoginUrl();
     });
 

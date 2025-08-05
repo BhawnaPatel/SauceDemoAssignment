@@ -7,9 +7,7 @@ describe('Cart Suite', () => {
 
   beforeEach(() => {
     cy.visit('/');
-    loginPage.inputUsername(login.username);
-    loginPage.inputPassword(login.password);
-    loginPage.clickLoginButton();
+    cy.login();
   })
 
   it('Verify Success Display Cart Page with Click on Cart Icon and product is displayed and can remove ', () => {

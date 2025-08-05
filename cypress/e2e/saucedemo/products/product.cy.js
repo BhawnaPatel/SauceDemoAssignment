@@ -7,9 +7,7 @@ describe('Products Suite', () => {
   beforeEach(() => {
     cy.visit('https://www.saucedemo.com/');
     cy.url().should('include', 'saucedemo');
-    loginPage.inputUsername(login.username);
-    loginPage.inputPassword(login.password);
-    loginPage.clickLoginButton();
+    cy.login();
   })
 
   it('Verify System Display Add to Cart Button and product should be added and removed', () => {
