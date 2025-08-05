@@ -29,7 +29,7 @@ Ensure that you have the following software installed on your machine:
     Node.js (version 14 or higher)
     npm (Node package manager)
 
-###Installation
+### Installation
 Clone this repository:
 
 git clone https://github.com/BhawnaPatel/SauceDemoAssignment
