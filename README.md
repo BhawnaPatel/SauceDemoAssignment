@@ -1,4 +1,4 @@
-## Introduction
+### Introduction
 
 This repository is the result of a project practice aimed at learning and applying Web Automation testing using Cypress. The main focus of this project is to validate the core functionalities of Saucedemo. The web automation Saucedemo covering the functional test of auth, cart, and products. This source of project is Saucedemo web demo application
 
@@ -17,9 +17,9 @@ The test cases included in this project are:
 
 ## Terminal Console Screenshot
 
-![img_2.png](img_2.png)
+![img_1.png](img_1.png)
 
-### Mochawesome Report
+## Mochawesome Report
 Terminal Report
 Getting Started
 Prerequisites
