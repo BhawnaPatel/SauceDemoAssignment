@@ -12,7 +12,11 @@ The test cases included in this project are:
 
 Screenshot of Saucedemo Report
 Mochawesome Report
-![img.png](img.png)
+![img_3.png](img_3.png)
+
+Terminal Console Screenshot
+![img_4.png](img_4.png)
+
 
 Mochawesome Report
 Terminal Report
